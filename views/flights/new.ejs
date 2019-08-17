@@ -9,22 +9,21 @@
 </head>
 <body>
     <h2>Enter a New Flight</h2>
+    <a href="/">Go Back Home</a>
     <form action="/flights" method="POST">
+        
         <label>Airline:
             <select name="airline">
                 <option value="American">American</option>
                 <option value="Southwest">Southwest</option>
                 <option value="United">United</option>
-                <option value="Delta">United</option>
-                <option value="Continental">United</option>
-                <option value="Alaska">United</option>
             </select>
         </label><br>
         <label>Flight Number:
-          <input type="text" name="flightNum">
+          <input type="text" name="flightNo">
         </label><br>
         <label>Departure
-            <input type="datetime-local" name="departs" value ="2019-05-17T15:30" min="2019-06-17T00:00" max="2021-10-17T00:00">
+            <input type="datetime-local" name="departs" value ="0000-00-17T00:00" min="1900-00-17T00:00" max="2021-12-17T00:00">
         </label><br>
         <label>Airport From:
             <select name="airport">
@@ -32,12 +31,10 @@
                 <option value="DAL">DAL</option>
                 <option value="LAX">LAX</option>
                 <option value="SEA">SEA</option>
-                <option value="SEA">CLE</option>
-                <option value="SEA">MSO</option>
             </select>
         </label><br>
         <label>Arrival
-                <input type="datetime-local" name="arrival" value ="2019-05-17T15:30" min="2019-06-17T00:00" max="2021-10-17T00:00">
+                <input type="datetime-local" name="arrival" value ="0000-00-17T00:00" min="1900-00-17T00:00" max="2021-12-17T00:00">
             </label><br>
             <label> destination to:
                 <select name="airport">
@@ -45,8 +42,6 @@
                     <option value="DAL">DAL</option>
                     <option value="LAX">LAX</option>
                     <option value="SEA">SEA</option>
-                    <option value="SEA">CLE</option>
-                    <option value="SEA">MSO</option>
                 </select>
             </label><br>
         
