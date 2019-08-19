@@ -52,9 +52,9 @@ function deleteFlight(req, res) {
 function addDestination(req, res, next) {
   Flight.findById(req.params.id, function(err, flight) {
     flight.destinations.push(req.body);
-    flight.save();
-    console.log(flight);
-    res.render('flights/show', { flight });
+    flight.save(function(err, flight) {
+        res.redirect(`/flights/${flight._id}`);
+    });
   });
 }
 
